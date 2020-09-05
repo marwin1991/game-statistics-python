@@ -6,8 +6,8 @@ def count_games(file_name): # (1) Count games
                 game_counter += 1
     return game_counter
 
-
-def decide(file_name, given_year): 
+def decide(file_name, given_year):
+    print("AAAAA")
     with open(file_name, "r") as file:
         for line in file.readlines():
             row_items = line.split("\t")
