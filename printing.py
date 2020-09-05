@@ -6,8 +6,10 @@ import os
 COUNT_GAMES_NUMER = 1
 DECIDE_NUMBER = 2
 GET_LATEST_NUMBER = 3
+COUNT_BY_GENRE_NUMBER = 4
 
-AVAILABE_FUNCTIONS_NUMBERS = [COUNT_GAMES_NUMER, DECIDE_NUMBER, GET_LATEST_NUMBER]
+
+AVAILABE_FUNCTIONS_NUMBERS = [COUNT_GAMES_NUMER, DECIDE_NUMBER, GET_LATEST_NUMBER, COUNT_BY_GENRE_NUMBER]
 
 def main():
     file_with_data = "game_stat.txt"
@@ -36,13 +38,16 @@ def execute_function(number, datafile):
 
     if number == GET_LATEST_NUMBER:
         return reports.get_latest(datafile) 
+    
+    if number == COUNT_BY_GENRE_NUMBER:
+        return reports.count_by_genre(datafile, ask_for_genre()) 
 
 def ask_for_a_year():
-    string_year = input("Give a year :")
+    string_year = ask_for_argument("Give a year :")
     return int(string_year)
 
 def ask_for_genre():
-    genre = input("Give a genre :")
+    genre = ask_for_argument("Give a genre :")
     return genre
 
 def ask_for_argument(labal):
@@ -54,6 +59,8 @@ def print_availble_functions():
     print(f"({COUNT_GAMES_NUMER}) - Count games")
     print(f"({DECIDE_NUMBER}) - Decide")
     print(f"({GET_LATEST_NUMBER}) - Get latest")
+    print(f"({COUNT_BY_GENRE_NUMBER}) - Count by genre")
+
 
 
 if __name__ == "__main__":
