@@ -8,6 +8,7 @@ def count_games(file_name): # (1) Count games
 
 
 def decide(file_name, year): 
+    print("AAAAA")
     return "Not implemented yet :) "
 
 
