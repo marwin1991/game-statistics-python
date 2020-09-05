@@ -22,9 +22,16 @@ def get_latest(file_name):
     return "Not implemented yet :) "
 
 
-def count_by_genre(file_name, genre):
+def count_by_genre(file_name, given_genre):
     print("AAAAA")
-    return "Not implemented yet :) "
+    counter = 0
+    with open(file_name, "r") as file:
+        for line in file.readlines():
+            row_items = line.split("\t")
+            game_genre = int(row_items[3])
+            if given_genre == game_genre:
+                counter += 1
+        return counter
 
 
 def get_line_number_by_title(file_name, title):
@@ -45,3 +52,4 @@ def get_genres(file_name):
 def when_was_top_sold_fps(file_name):
     print("AAAAA")
     return "Not implemented yet :) "
+
