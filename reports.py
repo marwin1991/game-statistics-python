@@ -18,10 +18,12 @@ def decide(file_name, given_year):
 
 
 def get_latest(file_name):
+    print("AAAAA")
     return "Not implemented yet :) "
 
 
 def count_by_genre(file_name, given_genre):
+    print("AAAAA")
     counter = 0
     with open(file_name, "r") as file:
         for line in file.readlines():
@@ -33,17 +35,21 @@ def count_by_genre(file_name, given_genre):
 
 
 def get_line_number_by_title(file_name, title):
+    print("AAAAA")
     return "Not implemented yet :) "
 
 
 def sort_abc(file_name):
+    print("AAAAA")
     return "Not implemented yet :) "
 
 
 def get_genres(file_name):
+    print("AAAAA")
     return "Not implemented yet :) "
 
 
 def when_was_top_sold_fps(file_name):
+    print("AAAAA")
     return "Not implemented yet :) "
 
